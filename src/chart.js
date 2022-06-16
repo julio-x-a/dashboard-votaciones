@@ -86,9 +86,9 @@ const MESAS = {
     }
   ]
 };
-/*
+/*---------------------------------------
     FUNCIONES
-*/
+  ---------------------------------------*/
 const drawChart = (options) => {
   const { chartId, type, labels, datasets, title } = options;
   const ctx = d.getElementById(chartId).getContext('2d');

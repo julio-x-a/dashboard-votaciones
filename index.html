@@ -6,27 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elecciones</title>
   </head>
-  <body class="flex flex-col h-screen">
+  <body class="flex flex-col h-screen bg-gray-100">
     <header class="bg-gray-50 text-center flex flex-row justify-center">
       <!-- <img src="./logo.svg" alt="Logo" class="w-24 my-5 mx-5" /> -->
       <h1 class="my-5 mx-2 text-2xl sm:text-4xl font-extralight text-gray-900">
         Dashboard votaciones 📈
       </h1>
     </header>
-    <main class="py-5 flex-grow grid grid-cols-3 bg-gray-100">
-      <div class="chart w-10/12 text-center">
-        <h2 class="text-2xl">Votos</h2>
-        <canvas id="votos"></canvas>
-        <h2>Total votos:</h2>
-      </div>
-      <div class="chart w-10/12 text-center">
-        <h2 class="text-2xl">Mesas</h2>
-        <canvas id="mesas"></canvas>
-      </div>
-      <div class="chart w-10/12 text-center">
-        <h2 class="text-2xl">Votos</h2>
-        <canvas id="votos"></canvas>
-      </div>
+    <main>
+      <section
+        class="w-3/4 py-5 grid grid-cols-1 flex-grow sm:grid-cols-2 m-auto justify-items-center bg-gray-100"
+      >
+        <div class="max-w-md text-center">
+          <h2 class="text-2xl">Votos</h2>
+          <canvas id="votos"></canvas>
+        </div>
+        <div class="max-w-md text-center">
+          <h2 class="text-2xl">Mesas</h2>
+          <canvas id="mesas"></canvas>
+        </div>
+      </section>
+      <section class="mt-10 flex flex-col items-center text-center">
+        <h2 class="text-3xl sm:text-5xl font-light mb-5">Total votos: 3485</h2>
+        <a
+          class="relative inline-flex items-center px-8 py-3 overflow-hidden text-white bg-sky-500 rounded group active:bg-indigo-500 focus:outline-none focus:ring"
+          href="/download"
+          type="button"
+        >
+          <span
+            class="absolute left-0 transition-transform -translate-x-full group-hover:translate-x-4"
+          >
+            <svg
+              class="w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </span>
+
+          <span class="text-sm font-medium transition-all group-hover:ml-4">
+            Actualizar
+          </span>
+        </a>
+      </section>
     </main>
     <footer class="my-10 bg-white">
       <div class="max-w-5xl px-4 py-10 mx-auto sm:px-6 lg:px-8">
@@ -35,8 +65,7 @@
         </div>
 
         <p class="max-w-md mx-auto mt-6 leading-relaxed text-center text-gray-500">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur
-          amet culpa cum itaque neque.
+          Aplicacion Web desarrollada por eSys Soluciones Tecnológicas.
         </p>
 
         <ul class="flex justify-center gap-6 mt-12 md:gap-8">
